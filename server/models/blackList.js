@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 const blackListSchema = new mongoose.Schema(
     {
         token: {
@@ -9,6 +9,6 @@ const blackListSchema = new mongoose.Schema(
     {
         timestamps: true,
     }
-)
+);
 
-export default mongoose.model('BlackList', blackListSchema)
+export default mongoose.model('BlackList', blackListSchema);

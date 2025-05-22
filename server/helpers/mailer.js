@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer'
-import dotenv from 'dotenv'
-dotenv.config()
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Debugging the .env variables
 /* console.log('SMTP Configuration:');
@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
         user: process.env.SMTP_MAIL,
         pass: process.env.SMTP_PASSWORD,
     },
-})
+});
 
 // Function to send email
 const sendMail = async (email, subject, content) => {
@@ -28,25 +28,25 @@ const sendMail = async (email, subject, content) => {
             to: email,
             subject: subject,
             html: content,
-        }
+        };
 
         // Sending the email
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                console.log('Error sending email:', error)
-                return
+                console.log('Error sending email:', error);
+                return;
             }
 
             // Check if info is not undefined and contains messageId
             if (info && info.messageId) {
-                console.log('Mail sent successfully', info.messageId)
+                console.log('Mail sent successfully', info.messageId);
             } else {
-                console.log('Mail sent but no messageId available.')
+                console.log('Mail sent but no messageId available.');
             }
-        })
+        });
     } catch (error) {
-        console.log('Error in sendMail function:', error.message)
+        console.log('Error in sendMail function:', error.message);
     }
-}
+};
 
-export default { sendMail }
+export default { sendMail };

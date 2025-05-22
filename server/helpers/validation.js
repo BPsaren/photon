@@ -1,4 +1,4 @@
-import { check } from 'express-validator'
+import { check } from 'express-validator';
 
 export const validateUserRegister = [
     check('role', 'Invalid user role')
@@ -31,18 +31,18 @@ export const validateUserRegister = [
         minNumbers: 1,
         minSymbols: 1,
     }),
-]
+];
 
 export const sendMailVerificationValidate = [
     check('email', 'Enter a valid email')
         .isEmail()
         .normalizeEmail({ gmail_remove_dots: true }),
-]
+];
 export const passwordvalidateValidator = [
     check('email', 'Enter a valid email')
         .isEmail()
         .normalizeEmail({ gmail_remove_dots: true }),
-]
+];
 
 export const loginUserValidation = [
     check('role', 'Invalid user role')
@@ -63,7 +63,7 @@ export const loginUserValidation = [
         minNumbers: 1,
         minSymbols: 1,
     }),
-]
+];
 
 export const updateProfileValidator = [
     check(
@@ -74,15 +74,15 @@ export const updateProfileValidator = [
     check('mobile', 'Mobile number must contain 10 digits'),
     /* .isLength({ min: 10, max: 10 })
     .isNumeric(), */
-]
+];
 
 export const otpSendMailVerificationValidate = [
     check('email', 'Enter a valid email')
         .isEmail()
         .normalizeEmail({ gmail_remove_dots: true }),
-]
+];
 
 export const otpVerificationValidate = [
     check('user_id', 'user is must be required').not().notEmpty(),
     check('otp', 'otp must be required').not().notEmpty(),
-]
+];

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
     {
@@ -10,11 +10,11 @@ const userSchema = new mongoose.Schema(
         isVerified: { type: Boolean, default: false },
     },
     { timestamps: true }
-)
+);
 //for timestamp
 //createdAt: This field is automatically set to the current date and time when the document is first created.
 //updatedAt: This field is updated to the current date and time every time the document is modified.
 
 // Add compound index to enforce unique email per role
-userSchema.index({ email: 1, role: 1 }, { unique: true })
-export default mongoose.model('User', userSchema)
+userSchema.index({ email: 1, role: 1 }, { unique: true });
+export default mongoose.model('User', userSchema);

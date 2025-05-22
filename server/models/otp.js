@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 const optSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
@@ -17,6 +17,6 @@ const optSchema = new mongoose.Schema({
         get: (timestamp) => timestamp.getTime(),
         set: (timestamp) => new Date(timestamp),
     },
-})
+});
 
-export default mongoose.model('otp', optSchema)
+export default mongoose.model('otp', optSchema);

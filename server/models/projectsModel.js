@@ -1,5 +1,5 @@
 // projectsModel.js
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const projectSchema = new mongoose.Schema(
     {
@@ -13,7 +13,7 @@ const projectSchema = new mongoose.Schema(
         },
     },
     { timestamps: true }
-)
+);
 
 // Export only the schema, not the model
-export default projectSchema
+export default projectSchema;

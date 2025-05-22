@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const passwordResetScehma = new mongoose.Schema({
     user_ID: {
@@ -10,6 +10,6 @@ const passwordResetScehma = new mongoose.Schema({
         type: String,
         required: true,
     },
-})
+});
 
-export default mongoose.model('ResetPassword', passwordResetScehma)
+export default mongoose.model('ResetPassword', passwordResetScehma);
