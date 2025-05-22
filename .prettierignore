@@ -1,1 +1,2 @@
-server/.prettierignore
+# Ignore artifacts:
+node_modules/

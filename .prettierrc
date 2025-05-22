@@ -1,1 +1,1 @@
-server/.prettierrc
+{ "trailingComma": "es5", "tabWidth": 4, "semi": false, "singleQuote": true }
