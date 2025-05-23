@@ -11,7 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
-            - run: cd server/ && npm i && npm prettier ./.. --write
+            - run: cd server/ && npm i && node node_modules/.bin/prettier --ignore-unknown --write
             - uses: autofix-ci/action@v1
               with:
                   commit-message: 'apply-prettier-format'
