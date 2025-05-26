@@ -6,11 +6,7 @@ import { initializeDefaultConnection } from './utils/db.js';
 
 dotenv.config();
 
-
-
-
-
-const          app = express();
+const app = express();
 
 // Middleware to parse JSON
 app.use(express.json());
