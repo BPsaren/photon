@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import 'dotenv/config';
 import blackList from '../models/blackList.js';
 
 const authUser = async (req, res, next) => {

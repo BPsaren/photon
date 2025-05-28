@@ -1,6 +1,7 @@
 import express from 'express';
 import userRegister from '../controllers/userRegister.js';
 import bodyParser from 'body-parser';
+
 const router = express.Router();
 router.use(express.json());
 router.use(bodyParser.json());
@@ -12,4 +13,4 @@ router.get('/reset-password', userRegister.resetPassword);
 router.post('/reset-password', userRegister.updatePassword);
 router.get('/reset-success', userRegister.resetSuccess);
 
-export default router; // Correct ES module export
+export default router;
