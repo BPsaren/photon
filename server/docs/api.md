@@ -5,7 +5,7 @@
 ## [`http://localhost:3001/api/register`](http://localhost:3001/api/register)
 
 <details>
-<summary>`POST`</summary>
+<summary>POST</summary>
 
 #### Header
 
